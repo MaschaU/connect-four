@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: rgb(209, 151, 201);
+}
+
+.slot {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+
+.slot-hover {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(209, 151, 201);
+}
+
+#container {
+    position: relative;
+    min-height: 100wh;
+}
+
+#boardTotal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#board {
+    margin-top: 200px;
+    display: flex;
+}
+
+.hole {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background-color: white;
+    position: relative;
+    left: 10px;
+    top: 10px;
+    border: rgb(139, 54, 114) solid 5px;
+}
+
+.hole-hover {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background-color: rgb(209, 151, 201);
+    position: relative;
+    left: 10px;
+    top: 10px;
+}
+  
+.hole-hover.hover-pink {
+    background-color: hotpink;
+}
+  
+  .hole-hover.hover-indigo {
+    background-color: indigo;
+}
+  
+  .player1 .hole {
+    background-color:hotpink;
+}
+  
+  .player2 .hole {
+    background-color: indigo;
+}
+
+#winner-pink {
+    position: fixed;
+    visibility: hidden;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    top: -600px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+  
+#winner-indigo {
+    position: fixed;
+    top: -600px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+}
+
+#pink {
+    padding: 20px 0px;
+    background-color: hotpink;
+    width: 100%;
+    color: whitesmoke;
+    font-size: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif
+}
+  
+#indigo {
+    padding: 20px 0px;
+    background-color: indigo;
+    width: 100%;
+    color: whitesmoke;
+    font-size: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+  
+#winner-indigo.on {
+    visibility: visible;
+}
+  
+#winner-pink.on {
+    visibility: visible;
+}
+  
+.button {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    padding: 20px 30px;
+    border: none;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 10px solid rgb(120, 3, 124);
+}
+@-webkit-keyframes slotwin {
+    0% {
+        background-color: #43064b;
+    }
+    25% {
+        background-color: #7d10af;
+    }
+    75% {
+        background-color: #d148e4;
+    }
+    100% {
+      background-color: #dc88f1;
+    }
+  }
+  .slot-win {
+    -webkit-animation-name: slotwin;
+    -webkit-animation-duration: 200ms;
+    -webkit-animation-iteration-count: 5;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+  .animation {
+    transform: scale(1);
+    background-color: white;
+    transition: transform 5s ease-out;
+  }
+  
